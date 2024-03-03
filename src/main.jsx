@@ -1,27 +1,38 @@
-import React from 'react'
+
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react';
 import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './components/Home';
+import About from './components/Navbar/About'
+import Contact from './components/Navbar/Contacts'
+
+
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <div>Hello this is home page of react route</div>,
-  },
+    path : "/",
+    element : <Home></Home>,
 
-  {
-    path : "/about",
-    element : <div>This is react route about pase</div>
-  },
+    children :[
+      {
+        path: "/about",
+        element : <About></About>
+      },
 
-  {
-    path : "/contact",
-    element : <div>Call me first please</div>
-  }
+      {
+        path : "/contact",
+        element:<Contact></Contact>
+
+      }
+    ]
+  },
+  
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

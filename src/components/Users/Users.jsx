@@ -3,7 +3,7 @@ import User from "../user/User";
 import './users.css'
 const Users = () => {
     const users = useLoaderData();
-    console.log(users)
+    
     return (
         <div>
             <h2>Our some of users {users.length}</h2>

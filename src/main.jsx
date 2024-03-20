@@ -14,6 +14,7 @@ import Users from './components/Users/Users';
 import UsersDetails from './components/UsersDetails/UsersDetails';
 import Posts from './components/Posts/Posts';
 import PostsDetails from './components/PostsDetails/PostsDetails';
+import FountErrors from './components/FountError/FountErrors';
 
 
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
   {
     path : '/',
     element : <Home></Home>,
+    errorElement: <FountErrors></FountErrors>,
 
     children :[
       {

@@ -1,3 +1,12 @@
 ul a {
      margin-left: 20px;
 }
+
+ul a.active {
+     text-decoration: underline;
+     color: beige;
+     background-color: rgba(31, 30, 29, 0.459);
+     padding: 5px;
+     border-radius: 10px;
+}
+
